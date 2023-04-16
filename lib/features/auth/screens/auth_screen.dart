@@ -48,7 +48,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       // val! can never be null
                       _auth = val!;
                     });
-                  },
+                  }, // onChanged
                 ),
               ),
               ListTile(
@@ -67,7 +67,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       // val! can never be null
                       _auth = val!;
                     });
-                  },
+                  }, // onChanged
                 ),
               ),
             ], // Column children[]
