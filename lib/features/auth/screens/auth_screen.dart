@@ -33,7 +33,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Create Account',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
@@ -52,7 +52,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Sign in',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
