@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Aamzon Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        // global color scheme
         colorScheme: const ColorScheme.light(
           primary: GlobalVariables.secondaryColor,
         ),
