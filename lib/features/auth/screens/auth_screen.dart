@@ -1,12 +1,16 @@
 import 'package:amazon_clone/constants/global_variables.dart';
 import 'package:flutter/material.dart';
 
+import '../../../common/widgets/custom_textfield.dart';
+
+// enum Auth for signIn and signUp
 enum Auth {
   signIn,
   signUp,
 }
 
 class AuthScreen extends StatefulWidget {
+  // routeName variable is used for Page Navigation
   static const String routeName = '/auth-screen';
   const AuthScreen({super.key});
   @override
@@ -14,8 +18,12 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
+  // setting the _auth enum object to Auth.signup
   Auth _auth = Auth.signUp;
-
+  // GlobalKey is used for the form
+  final _signUpFormKey = GlobalKey<FormState>();
+  final _signInFormKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +59,16 @@ class _AuthScreenState extends State<AuthScreen> {
                   }, // onChanged
                 ),
               ),
+              // Radio Button Select for signIn and signUp
+              if (_auth == Auth.signUp)
+                Form(
+                  key: _signUpFormKey,
+                  // Column Widgets for the Form Fields
+                  child: Column(
+                    children: [CustomTextField(controller: controller)],
+                  ),
+                ),
+
               ListTile(
                 title: const Text(
                   'Sign in',
